@@ -1,0 +1,118 @@
+<html>
+<title>Jazzy Clicker</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<body onbeforeunload="return closingCode()">
+  <link rel="stylesheet" href="stylegame.css">
+    <script src="gamejs.js"></script>
+    <center class='center'>
+      <h1 id='total'>Jazzy Juice: 0</h1>
+      <h5 id="click" style="font-family:trebuchet MS;">JJ/click: 1 | JJ/sec: 0</h5>
+      <img class="round" src="images/jazzyjuice.png" width="150" onclick='clicked()'></img>
+      <br><br>
+      <button id='morejj' class="round" onclick='upgrade("More Jazzy Juice")' style="font-family:courier;">More Jazzy Juice: 15</button>
+      <br><br>
+      <button id='jjmachine' class="round" onclick='upgrade("Jazzy Juice Machine")' style="font-family:courier;">Jazzy Juice Machine: 25 | +1/sec</button>
+      <br><br>
+      <button id='slave' class="round" onclick='upgrade("Marcus Slave")' style="font-family:courier;">Marcus Slave: 250 | +15/sec</button><br><br>
+      <button class="settings" onclick="save()">Save</button>
+      <button class="settings" onclick="load()">Load</button>
+      <button class="settings" onclick="reset()">Reset</button><br><br>
+      <button class="settings" onclick="enlight()">Enlighten yourself</button>
+      <button class="settings" id="toggleButton">Toggle Playback</button>
+      <audio id="song1" src="audio/moonfries.mp3" loop></audio>
+      <audio id="song2" src="audio/jazzyjuicesong.mp3"></audio>
+
+
+      <div class="video-container" id="videoContainer">
+        <video controls id="videoPlayer">
+          <source src="images/jazzyjuice480p.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <script>
+        function enlight() {
+          var videoContainer = document.getElementById('videoContainer');
+          var videoPlayer = document.getElementById('videoPlayer');
+    
+          // Show the video container
+          videoContainer.style.display = 'block';
+    
+          // Play the video
+          videoPlayer.play();
+    
+          // When the video finishes or is exited out
+          videoPlayer.onended = function() {
+            // Hide the video container
+            videoContainer.style.display = 'none';
+          };
+    
+          videoContainer.onclick = function() {
+            // Hide the video container if clicked outside the video
+            if (event.target == videoContainer) {
+              videoContainer.style.display = 'none';
+            }
+          };
+        }
+      </script>
+
+<script>
+  const song1 = document.getElementById('song1');
+  const song2 = document.getElementById('song2');
+  const toggleButton = document.getElementById('toggleButton');
+  let isPlaying = false;
+
+  // Function to toggle the playback
+  function togglePlayback() {
+    if (isPlaying) {
+      song1.pause();
+      song2.pause();
+      toggleButton.textContent = 'Play';
+    } else {
+      song1.play();
+      song2.currentTime = 0;
+      song2.play();
+      toggleButton.textContent = 'Pause';
+    }
+    isPlaying = !isPlaying;
+  }
+
+  // Start playing the songs when the page loads
+  window.addEventListener('load', () => {
+    song1.play();
+    toggleButton.textContent = 'Pause';
+    isPlaying = true;
+  });
+
+  // Add click event listener to the toggle button
+  toggleButton.addEventListener('click', togglePlayback);
+
+  // Loop the first song
+  song1.addEventListener('ended', () => {
+    song1.currentTime = 0; // Reset the song's playback position
+    song1.play();
+  });
+
+  // Play the second song when the first song ends
+  song1.addEventListener('timeupdate', () => {
+    if (song1.currentTime >= song1.duration - 1) {
+      song2.play();
+    }
+  });
+
+  // Loop the second song
+  song2.addEventListener('ended', () => {
+    song2.currentTime = 0; // Reset the song's playback position
+    song2.play();
+  });
+</script>
+
+
+
+      
+    </center>
+  </link>
+</body>
+</meta>
+
+</html>

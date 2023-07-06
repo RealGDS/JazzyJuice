@@ -1,0 +1,148 @@
+/* Reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #f8f8f8;
+  }
+  
+  /* Header styles */
+  header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    color: white;
+    font-size: 36px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 20px 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #ff8800;
+  }
+  
+  /* Main styles */
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+  }
+  
+  video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+  }
+  
+  #lyrics-content p {
+    margin-bottom: 10px;
+  }
+  
+  /* Gallery styles */
+  #gallery {
+    text-align: center;
+  }
+  
+  .gallery-images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .gallery-images img {
+    width: calc(33.33% - 10px);
+    max-height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  
+  /* Image overlay styles */
+  #image-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  #enlarged-image {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    main {
+      padding: 10px;
+    }
+  }
+
+  #instagram-posts h2 {
+    text-align: center;
+  }
+  
+  #merch h2 {
+    text-align: center;
+  }
+
+  .centered-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  
+  

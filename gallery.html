@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jazzy Juice - Gallery</title>
+    <link rel="stylesheet" href="gallery.css" />
+    <script src="gallery.js" type="module"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Jazzy Juice</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="news.html">News</a></li>         
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="gallery">
+        <h2>Recent Twitter Posts</h2>
+        <div class="gallery-images">
+          <img
+            src="pics/sexy1.jpg"
+            alt="Image 1"
+            onclick="enlargeImage(this)"
+          />
+          <img
+            src="pics/sexy2.jpg"
+            alt="Image 2"
+            onclick="enlargeImage(this)"
+          />
+          <img
+            src="pics/sexy3.jpg"
+            alt="Image 3"
+            onclick="enlargeImage(this)"
+          />
+      </section>
+
+      <section id="instagram-posts">
+        <h2>Recent Instagram Posts</h2>
+        <div class="gallery-images">
+          <img
+            src="pics/sexy11.jpg"
+            alt="Instagram Image 1"
+            onclick="enlargeImage(this)"
+          />
+          <img
+            src="pics/sexy22.jpg"
+            alt="Instagram Image 2"
+            onclick="enlargeImage(this)"
+          />
+          <img
+            src="pics/sexy33.jpg"
+            alt="Instagram Image 3"
+            onclick="enlargeImage(this)"
+          />
+        </div>
+      </section>
+
+      <section id="merch">
+        <h2>Merch</h2>
+        <div class="gallery-images">
+            <div class="gallery-images centered-images">
+          <img src="pics/burgermerch.jpg" alt="Merch 1" onclick="enlargeImage(this)" />
+          <img src="pics/milomerch.jpg" alt="Merch 2" onclick="enlargeImage(this)" />
+          <img src="pics/cutemerch.jpg" alt="Merch 3" onclick="enlargeImage(this)" />
+          <img src="pics/kingmerch.jpg" alt="Merch 4" onclick="enlargeImage(this)" />
+          <img src="pics/hoodiemerch.jpg" alt="Merch 5" onclick="enlargeImage(this)" />
+          </div>
+        </div>
+        <p>Check out Samme's merchandise collection <a href="https://kingsammelot.myshopify.com" target="_blank">here</a>.</p>
+      </section>
+      
+    </main>
+    <div id="image-overlay">
+      <span class="close-btn" onclick="closeImageOverlay()">&times;</span>
+      <img id="enlarged-image" alt="Enlarged Image" />
+    </div>
+    <footer>
+      <p>&copy; 2023 Jazzy Juice. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

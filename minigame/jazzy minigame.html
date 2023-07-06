@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styleminigame.css" />
+    <script src="scriptminigame.js" type="module"></script>
+    <script src="bgmusic.js" type="module"></script>
+    <script src="bgmusicbutton.js" type="module"></script>
+    <script src="pipeeffect.js" type="module"></script>
+  </head>
+  <body>
+    <div class="world" data-world>
+      <div class="score" data-score>0</div>
+      <div class="start-screen" data-start-screen>Press Any Key To Start</div>
+      <img src="imgs/ground.png" class="ground" data-ground />
+      <img src="imgs/ground.png" class="ground" data-ground />
+      <img src="imgs/dino-stationary.png" class="dino" data-dino />
+    </div>
+    <div class="music-toggle-container">
+      <button id="music-toggle">Toggle Music</button>
+    </div>
+    <div class="music-toggle-container-left">
+      <button class="music-toggle" id="new-toggle">Toggle Pipe</button>
+    </div>
+
+    <audio
+      src="sounds/KingSammelot - Jazzy Juice (Official Music Video) 100K SPECIAL.mp3"
+      id="background-music"
+      autoplay
+    ></audio>
+  </body>
+</html>
